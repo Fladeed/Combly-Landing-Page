@@ -6,15 +6,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="mb-4">
               <Image
-                src="/images/logo-square.png"
+                src="/images/logo.png"
                 alt="Combly Logo"
-                width={32}
-                height={32}
-                className="rounded-lg"
+                width={120}
+                height={40}
+                className="h-8 w-auto"
               />
-              <span className="text-xl font-bold">Combly</span>
             </div>
             <p className="text-gray-400">
               AI-powered workflow automation for everyone

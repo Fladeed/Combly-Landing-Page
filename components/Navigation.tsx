@@ -29,17 +29,14 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center">
           <Image
-            src="/images/logo-square.png"
+            src="/images/logo-primary.png"
             alt="Combly Logo"
-            width={32}
-            height={32}
-            className="rounded-lg"
+            width={120}
+            height={40}
+            className="h-8 w-auto"
           />
-          <span className="text-xl font-bold text-gray-900 dark:text-white">
-            Combly
-          </span>
         </div>
 
         <div className="hidden md:flex items-center space-x-8">
