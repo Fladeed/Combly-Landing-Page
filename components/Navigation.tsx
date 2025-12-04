@@ -2,13 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -16,40 +21,62 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md"
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary-gradient rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">C</span>
-            </div>
-            <span className="text-2xl font-bold bg-primary-gradient bg-clip-text text-transparent">
-              Combly.ai
-            </span>
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-gradient-to-br from-primary to-medical rounded-lg"></div>
+          <span className="text-xl font-bold text-gray-900 dark:text-white">
+            Combly
+          </span>
+        </div>
+
+        <div className="hidden md:flex items-center space-x-8">
+          <Link
+            href="#features"
+            className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+          >
+            Features
+          </Link>
+          <Link
+            href="#how-it-works"
+            className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+          >
+            How It Works
+          </Link>
+          <Link
+            href="#use-cases"
+            className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+          >
+            Use Cases
+          </Link>
+          <Link
+            href="#ai-providers"
+            className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+          >
+            AI Providers
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-primary transition-colors">
-              Features
-            </a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-primary transition-colors">
-              How it Works
-            </a>
-            <a href="#use-cases" className="text-gray-600 hover:text-primary transition-colors">
-              Use Cases
-            </a>
-            <a
-              href="#download"
-              className="px-6 py-2 bg-primary-gradient text-white rounded-lg hover:opacity-90 transition-opacity font-medium"
+          {mounted && (
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              aria-label="Toggle theme"
             >
-              Get Started
-            </a>
-          </div>
+              {theme === "dark" ? <FiSun size={20} /> : <FiMoon size={20} />}
+            </button>
+          )}
+
+          <Link
+            href="#cta"
+            className="bg-gradient-to-r from-primary to-medical text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow"
+          >
+            Get Started
+          </Link>
         </div>
       </div>
     </nav>

@@ -2,56 +2,65 @@ import { FiZap } from "react-icons/fi";
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 px-6 bg-hero-gradient">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center space-y-8">
-          <div className="inline-block">
-            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium inline-flex items-center gap-2">
-              <FiZap className="w-4 h-4" />
-              AI-Powered Browser Automation
-            </span>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Transform Your Web Browsing
-            <br />
-            <span className="bg-primary-gradient bg-clip-text text-transparent">
-              with AI Intelligence
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Combly.ai combines visual element selection, AI processing, and workflow automation
-            to supercharge your productivity across any website.
-          </p>
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-medical/10 to-white dark:from-primary/20 dark:via-medical/20 dark:to-gray-900 px-6">
+      <div className="max-w-7xl mx-auto text-center">
+        <div className="inline-block mb-6 px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-lg">
+          <span className="text-sm font-semibold text-primary dark:text-primary flex items-center gap-2">
+            <FiZap /> AI-Powered Automation
+          </span>
+        </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <a
-              href="#download"
-              className="px-8 py-4 bg-primary-gradient text-white rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl"
-            >
-              Get Started Free
-            </a>
-            <a
-              href="#features"
-              className="px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold text-lg hover:bg-primary/5 transition-colors"
-            >
-              Explore Features
-            </a>
-          </div>
+        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          Build Intelligent
+          <br />
+          <span className="bg-gradient-to-r from-primary to-medical bg-clip-text text-transparent">
+            Workflow Automation
+          </span>
+        </h1>
 
-          <div className="pt-12">
-            <div className="relative bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto">
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-success/20 rounded-lg flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-20 h-20 bg-primary-gradient rounded-full mx-auto flex items-center justify-center">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-                    </svg>
-                  </div>
-                  <p className="text-gray-500 text-lg">Visual Workflow Builder Demo</p>
-                </div>
-              </div>
+        <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+          Create powerful automation workflows with visual selectors, AI
+          assistance, and seamless cross-website execution. No coding required.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#cta"
+            className="bg-gradient-to-r from-primary to-medical text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-shadow"
+          >
+            Get Started Free
+          </a>
+          <a
+            href="#how-it-works"
+            className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-primary dark:hover:border-primary transition-colors"
+          >
+            See How It Works
+          </a>
+        </div>
+
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-primary dark:text-primary mb-2">
+              50+
+            </div>
+            <div className="text-gray-600 dark:text-gray-400">
+              Automation Actions
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-medical dark:text-medical mb-2">
+              3
+            </div>
+            <div className="text-gray-600 dark:text-gray-400">
+              AI Providers Integrated
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-success dark:text-success mb-2">
+              100%
+            </div>
+            <div className="text-gray-600 dark:text-gray-400">
+              Visual Interface
             </div>
           </div>
         </div>

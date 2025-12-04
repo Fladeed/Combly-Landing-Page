@@ -1,50 +1,84 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12 px-6">
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-gray-900 dark:bg-black text-white py-12 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary-gradient rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
-              <span className="text-2xl font-bold">Combly.ai</span>
+              <div className="w-8 h-8 bg-gradient-to-br from-primary to-medical rounded-lg"></div>
+              <span className="text-xl font-bold">Combly</span>
             </div>
             <p className="text-gray-400">
-              AI-powered browser automation for everyone
+              AI-powered workflow automation for everyone
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a></li>
-              <li><a href="#use-cases" className="hover:text-white transition-colors">Use Cases</a></li>
+              <li>
+                <a href="#features" className="hover:text-primary transition-colors">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#how-it-works" className="hover:text-primary transition-colors">
+                  How It Works
+                </a>
+              </li>
+              <li>
+                <a href="#use-cases" className="hover:text-primary transition-colors">
+                  Use Cases
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Tutorials</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Tutorials
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Community
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h4 className="font-semibold mb-4">Connect</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Discord
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Combly.ai. All rights reserved.</p>
+          <p>&copy; 2024 Combly. All rights reserved.</p>
         </div>
       </div>
     </footer>

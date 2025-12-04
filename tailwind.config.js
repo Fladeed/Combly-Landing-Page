@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,29 +9,29 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "hsl(200, 100%, 45%)",
-          dark: "hsl(200, 100%, 35%)",
-          light: "hsl(210, 40%, 98%)",
-        },
-        medical: {
-          blue: "hsl(200, 100%, 45%)",
-          green: "hsl(160, 60%, 50%)",
-        },
-        success: "hsl(160, 60%, 50%)",
-        danger: "hsl(0, 84.2%, 60.2%)",
+        primary: "hsl(200, 100%, 45%)",
+        medical: "hsl(160, 60%, 50%)",
+        success: "hsl(142, 71%, 45%)",
+        background: "hsl(0, 0%, 100%)",
+        foreground: "hsl(222.2, 84%, 4.9%)",
       },
       backgroundImage: {
-        "primary-gradient": "linear-gradient(135deg, hsl(200, 100%, 45%), hsl(160, 60%, 50%))",
-        "hero-gradient": "linear-gradient(135deg, hsl(200, 100%, 45%, 0.1), hsl(160, 60%, 50%, 0.1))",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        float: "float 3s ease-in-out infinite",
+        "fade-in": "fadeIn 0.5s ease-in",
+        "slide-up": "slideUp 0.5s ease-out",
       },
       keyframes: {
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideUp: {
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
     },

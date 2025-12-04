@@ -1,92 +1,103 @@
-import { FiTarget, FiCpu, FiZap, FiGlobe, FiMessageCircle, FiCommand, FiActivity, FiMic, FiPackage } from "react-icons/fi";
+import {
+  FiTarget,
+  FiCpu,
+  FiZap,
+  FiGlobe,
+  FiMessageCircle,
+  FiCommand,
+  FiActivity,
+  FiMic,
+  FiPackage,
+} from "react-icons/fi";
+
+const features = [
+  {
+    icon: <FiTarget className="w-8 h-8" />,
+    title: "Visual Element Selection",
+    description:
+      "Point-and-click interface to select any element on a webpage with smart XPath generation.",
+  },
+  {
+    icon: <FiCpu className="w-8 h-8" />,
+    title: "AI-Powered Assistance",
+    description:
+      "Integrated AI helps you build workflows, suggest optimizations, and troubleshoot issues.",
+  },
+  {
+    icon: <FiZap className="w-8 h-8" />,
+    title: "Instant Execution",
+    description:
+      "Run workflows instantly with a single click or keyboard shortcut. No delays, pure speed.",
+  },
+  {
+    icon: <FiGlobe className="w-8 h-8" />,
+    title: "Cross-Website Automation",
+    description:
+      "Seamlessly execute workflows across multiple websites and tabs in a single flow.",
+  },
+  {
+    icon: <FiMessageCircle className="w-8 h-8" />,
+    title: "Smart AI Chat Integration",
+    description:
+      "Chat with AI while building workflows. Get suggestions, explanations, and quick fixes.",
+  },
+  {
+    icon: <FiCommand className="w-8 h-8" />,
+    title: "Flexible Action Types",
+    description:
+      "50+ action types including clicks, inputs, extractions, conditionals, and API calls.",
+  },
+  {
+    icon: <FiActivity className="w-8 h-8" />,
+    title: "Real-time Debugging",
+    description:
+      "Visual feedback and detailed logs help you identify and fix issues instantly.",
+  },
+  {
+    icon: <FiMic className="w-8 h-8" />,
+    title: "Voice Commands",
+    description:
+      "Control workflows with voice commands for hands-free automation execution.",
+  },
+  {
+    icon: <FiPackage className="w-8 h-8" />,
+    title: "Export & Share",
+    description:
+      "Export workflows as JSON, share with your team, or import pre-built templates.",
+  },
+];
 
 export default function Features() {
-  const features = [
-    {
-      icon: FiTarget,
-      title: "Visual Element Selection",
-      description: "Click-to-select any element on any webpage. Smart XPath generation with fallback alternatives.",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: FiCpu,
-      title: "Multi-AI Integration",
-      description: "OpenAI GPT-4, Anthropic Claude, and Groq support. Switch providers and models on the fly.",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: FiZap,
-      title: "Visual Workflows",
-      description: "Node-based workflow builder with drag-and-drop. Create complex automations visually.",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: FiGlobe,
-      title: "Cross-Website Automation",
-      description: "Navigate and automate across multiple websites in a single workflow with smart tab management.",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: FiMessageCircle,
-      title: "Comby AI Chat",
-      description: "Floating AI assistant on every page. Context-aware conversations with persistent history.",
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      icon: FiCommand,
-      title: "Quick Search (Ctrl+K)",
-      description: "Command palette to instantly find and execute any automation. Fuzzy search across all items.",
-      color: "from-pink-500 to-rose-500"
-    },
-    {
-      icon: FiActivity,
-      title: "Blood Analysis AI",
-      description: "Smart detection and analysis of medical test results. Specialized healthcare automation.",
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      icon: FiMic,
-      title: "Audio Recording",
-      description: "Browser-based recording with AI transcription. Use voice input in your workflows.",
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      icon: FiPackage,
-      title: "Import/Export",
-      description: "Backup, share, and version control your automations. JSON workflow format for teams.",
-      color: "from-violet-500 to-purple-500"
-    }
-  ];
-
   return (
-    <section id="features" className="py-20 px-6 bg-white">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Powerful Features for
-            <span className="bg-primary-gradient bg-clip-text text-transparent"> Every Use Case</span>
+    <section id="features" className="py-20 bg-white dark:bg-gray-900 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Powerful Features
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Everything you need to automate, integrate, and accelerate your web workflows
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Everything you need to build intelligent automation workflows
+            without writing a single line of code.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <div
-                key={index}
-                className="group p-8 rounded-2xl border-2 border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 bg-white"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <Icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-medical/20 dark:from-primary/30 dark:to-medical/30 rounded-xl flex items-center justify-center mb-4 text-primary dark:text-primary">
+                {feature.icon}
               </div>
-            );
-          })}
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
