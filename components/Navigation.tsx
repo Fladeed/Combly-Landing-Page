@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTheme } from "next-themes";
 import { FiSun, FiMoon } from "react-icons/fi";
 
@@ -28,8 +29,14 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-primary to-medical rounded-lg"></div>
+        <div className="flex items-center space-x-3">
+          <Image
+            src="/images/logo-square.png"
+            alt="Combly Logo"
+            width={32}
+            height={32}
+            className="rounded-lg"
+          />
           <span className="text-xl font-bold text-gray-900 dark:text-white">
             Combly
           </span>

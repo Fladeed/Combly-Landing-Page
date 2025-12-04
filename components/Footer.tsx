@@ -1,11 +1,19 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-medical rounded-lg"></div>
+            <div className="flex items-center space-x-3 mb-4">
+              <Image
+                src="/images/logo-square.png"
+                alt="Combly Logo"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <span className="text-xl font-bold">Combly</span>
             </div>
             <p className="text-gray-400">
