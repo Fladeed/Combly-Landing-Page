@@ -1,11 +1,14 @@
+import { FiZap } from "react-icons/fi";
+
 export default function Hero() {
   return (
     <section className="pt-32 pb-20 px-6 bg-hero-gradient">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-8">
           <div className="inline-block">
-            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-              🚀 AI-Powered Browser Automation
+            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium inline-flex items-center gap-2">
+              <FiZap className="w-4 h-4" />
+              AI-Powered Browser Automation
             </span>
           </div>
           

@@ -1,21 +1,24 @@
+import { FiCpu, FiZap } from "react-icons/fi";
+import { SiOpenai, SiAnthropic } from "react-icons/si";
+
 export default function AIProviders() {
   const providers = [
     {
       name: "OpenAI",
       models: ["GPT-4", "GPT-4o", "GPT-4o-mini"],
-      icon: "🚀",
+      icon: SiOpenai,
       color: "from-green-400 to-emerald-500"
     },
     {
       name: "Anthropic Claude",
       models: ["Claude Sonnet 4.5", "Claude Opus"],
-      icon: "🧠",
+      icon: SiAnthropic,
       color: "from-orange-400 to-red-500"
     },
     {
       name: "Groq",
       models: ["Fast LLM Inference"],
-      icon: "⚡",
+      icon: FiZap,
       color: "from-purple-400 to-pink-500"
     }
   ];
@@ -33,24 +36,27 @@ export default function AIProviders() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {providers.map((provider, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group"
-            >
-              <div className={`w-16 h-16 bg-gradient-to-br ${provider.color} rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
-                {provider.icon}
+          {providers.map((provider, index) => {
+            const Icon = provider.icon;
+            return (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${provider.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <Icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{provider.name}</h3>
+                <div className="space-y-2">
+                  {provider.models.map((model, i) => (
+                    <div key={i} className="text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
+                      {model}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">{provider.name}</h3>
-              <div className="space-y-2">
-                {provider.models.map((model, i) => (
-                  <div key={i} className="text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
-                    {model}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-12 text-center">
