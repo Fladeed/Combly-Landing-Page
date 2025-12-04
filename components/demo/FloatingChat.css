@@ -1,0 +1,657 @@
+/* Comby Chat Component Styles */
+/* Matches the medical theme from shared-variables.css */
+/* Enhanced with CSS isolation for robust style protection */
+
+/* Floating Icon (Collapsed State) */
+.floating-chat-icon {
+  /* Force all property resets for isolation */
+  all: initial;
+  position: fixed !important;
+  width: 56px !important;
+  height: 56px !important;
+  min-width: 56px !important;
+  min-height: 56px !important;
+  max-width: 56px !important;
+  max-height: 56px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, hsl(200 100% 45%), hsl(160 60% 50%)) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  z-index: 2147483647 !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+}
+
+.floating-chat-icon:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15) !important;
+}
+
+.floating-chat-icon svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) !important;
+  display: block !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.floating-chat-icon img {
+  display: block !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) !important;
+  transform: scale(1.2) !important;
+}
+
+.floating-chat-icon-badge {
+  all: initial;
+  position: absolute !important;
+  top: -4px !important;
+  right: -4px !important;
+  background: hsl(160 60% 50%) !important;
+  color: white !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 2px 6px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  line-height: 1 !important;
+}
+
+/* Positioning Classes */
+.floating-chat-top-left {
+  top: 20px !important;
+  left: 20px !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+.floating-chat-top-right {
+  top: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  bottom: auto !important;
+}
+
+.floating-chat-bottom-left {
+  bottom: 20px !important;
+  left: 20px !important;
+  top: auto !important;
+  right: auto !important;
+}
+
+.floating-chat-bottom-right {
+  bottom: 20px !important;
+  right: 20px !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+/* Chat Container (Expanded State) */
+.floating-chat-container {
+  all: initial;
+  position: fixed !important;
+  width: 380px !important;
+  height: 600px !important;
+  min-width: 380px !important;
+  min-height: 600px !important;
+  max-width: 380px !important;
+  max-height: 600px !important;
+  background: white !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  z-index: 2147483647 !important;
+  overflow: hidden !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  border: 1px solid hsl(214.3 31.8% 91.4%) !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Header */
+.floating-chat-header {
+  all: initial;
+  display: flex !important;
+  background: linear-gradient(135deg, hsl(200 100% 45%), hsl(160 60% 50%)) !important;
+  color: white !important;
+  padding: 16px !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  width: 100% !important;
+}
+
+.floating-chat-header-left {
+  all: initial;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.floating-chat-logo {
+  all: initial;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.floating-chat-logo svg {
+  display: block !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.floating-chat-logo img {
+  display: block !important;
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  transform: scale(1.15) !important;
+}
+
+.floating-chat-title {
+  all: initial;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+.floating-chat-title h3 {
+  all: initial;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: white !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+}
+
+.floating-chat-subtitle {
+  all: initial;
+  display: block !important;
+  font-size: 12px !important;
+  opacity: 0.9 !important;
+  font-weight: 400 !important;
+  color: white !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  line-height: 1 !important;
+}
+
+.floating-chat-header-right {
+  all: initial;
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.floating-chat-header-btn {
+  all: initial;
+  display: flex !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  color: white !important;
+  transition: background 0.2s ease !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+}
+
+.floating-chat-header-btn svg {
+  display: block !important;
+  width: 18px !important;
+  height: 18px !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  fill: none !important;
+}
+
+.floating-chat-header-btn:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Settings Panel */
+.floating-chat-settings {
+  all: initial;
+  display: flex !important;
+  flex-direction: column !important;
+  background: hsl(210 40% 96.1%) !important;
+  border-bottom: 1px solid hsl(214.3 31.8% 91.4%) !important;
+  padding: 16px !important;
+  gap: 12px !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+}
+
+.floating-chat-setting {
+  all: initial;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.floating-chat-setting label {
+  all: initial;
+  display: block !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: hsl(215.4 16.3% 46.9%) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  line-height: 1 !important;
+}
+
+.floating-chat-setting select {
+  all: initial;
+  display: block !important;
+  padding: 8px 12px !important;
+  border: 1px solid hsl(214.3 31.8% 91.4%) !important;
+  border-radius: 6px !important;
+  background: white !important;
+  font-size: 14px !important;
+  color: hsl(222.2 84% 4.9%) !important;
+  cursor: pointer !important;
+  transition: border-color 0.2s ease !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  line-height: 1.5 !important;
+}
+
+.floating-chat-setting select:focus {
+  outline: none !important;
+  border-color: hsl(200 100% 45%) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.floating-chat-settings-note {
+  all: initial;
+  display: block !important;
+  font-size: 11px !important;
+  color: hsl(215.4 16.3% 56.9%) !important;
+  margin: 0 !important;
+  font-style: italic !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  line-height: 1.4 !important;
+}
+
+/* Messages Area */
+.floating-chat-messages {
+  all: initial;
+  display: flex !important;
+  flex: 1 !important;
+  flex-direction: column !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 16px !important;
+  gap: 16px !important;
+  background: hsl(210 40% 94%) !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+.floating-chat-messages::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.floating-chat-messages::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.floating-chat-messages::-webkit-scrollbar-thumb {
+  background: hsl(214.3 31.8% 91.4%) !important;
+  border-radius: 3px !important;
+}
+
+.floating-chat-messages::-webkit-scrollbar-thumb:hover {
+  background: hsl(215.4 16.3% 56.9%) !important;
+}
+
+/* Empty State */
+.floating-chat-empty {
+  all: initial;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  text-align: center !important;
+  color: hsl(215.4 16.3% 56.9%) !important;
+  gap: 8px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+}
+
+.floating-chat-empty svg {
+  opacity: 0.3 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+  stroke: currentColor !important;
+  fill: none !important;
+  stroke-width: 1.5 !important;
+}
+
+.floating-chat-empty p {
+  all: initial;
+  display: block !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: hsl(215.4 16.3% 46.9%) !important;
+  margin: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  line-height: 1.5 !important;
+}
+
+.floating-chat-empty span {
+  all: initial;
+  display: block !important;
+  font-size: 14px !important;
+  font-style: italic !important;
+  color: hsl(215.4 16.3% 56.9%) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  line-height: 1.5 !important;
+}
+
+/* Message */
+.floating-chat-message {
+  all: initial;
+  display: flex !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+}
+
+.floating-chat-message-user {
+  flex-direction: row-reverse !important;
+}
+
+.floating-chat-message-avatar {
+  all: initial;
+  display: flex !important;
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  border-radius: 50% !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  background: white !important;
+  border: 2px solid hsl(214.3 31.8% 91.4%) !important;
+  box-sizing: border-box !important;
+  color: hsl(215.4 16.3% 46.9%) !important;
+}
+
+.floating-chat-message-avatar svg {
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  fill: none !important;
+}
+
+.floating-chat-message-avatar img {
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  transform: scale(1.6) !important;
+}
+
+.floating-chat-message-assistant .floating-chat-message-avatar {
+  background: white !important;
+  border-color: hsl(214.3 31.8% 91.4%) !important;
+}
+
+.floating-chat-message-content {
+  all: initial;
+  display: flex !important;
+  flex: 1 !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  max-width: 75% !important;
+}
+
+.floating-chat-message-text {
+  all: initial;
+  display: block !important;
+  background: white !important;
+  padding: 12px 16px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: hsl(222.2 84% 4.9%) !important;
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+.floating-chat-message-user .floating-chat-message-text {
+  background: linear-gradient(135deg, hsl(200 100% 45%), hsl(160 60% 50%)) !important;
+  color: white !important;
+}
+
+.floating-chat-message-time {
+  all: initial;
+  display: block !important;
+  font-size: 11px !important;
+  color: hsl(215.4 16.3% 56.9%) !important;
+  padding: 0 4px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  line-height: 1 !important;
+}
+
+.floating-chat-message-user .floating-chat-message-time {
+  text-align: right !important;
+}
+
+/* Typing Indicator */
+.floating-chat-typing {
+  all: initial;
+  display: flex !important;
+  gap: 4px !important;
+  padding: 12px 16px !important;
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+  align-items: center !important;
+}
+
+.floating-chat-typing span {
+  all: initial;
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+  min-width: 8px !important;
+  min-height: 8px !important;
+  border-radius: 50% !important;
+  background: hsl(215.4 16.3% 56.9%) !important;
+  animation: typing 1.4s infinite !important;
+}
+
+.floating-chat-typing span:nth-child(2) {
+  animation-delay: 0.2s !important;
+}
+
+.floating-chat-typing span:nth-child(3) {
+  animation-delay: 0.4s !important;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0) !important;
+    opacity: 0.7 !important;
+  }
+  30% {
+    transform: translateY(-10px) !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Input Area */
+.floating-chat-input-container {
+  all: initial;
+  display: flex !important;
+  padding: 16px !important;
+  background: white !important;
+  border-top: 1px solid hsl(214.3 31.8% 91.4%) !important;
+  gap: 8px !important;
+  align-items: flex-end !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+.floating-chat-input {
+  all: initial;
+  display: block !important;
+  flex: 1 !important;
+  padding: 10px 12px !important;
+  border: 1px solid hsl(214.3 31.8% 91.4%) !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  resize: none !important;
+  max-height: 120px !important;
+  min-height: 40px !important;
+  line-height: 1.5 !important;
+  color: hsl(222.2 84% 4.9%) !important;
+  transition: border-color 0.2s ease !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+  background: white !important;
+}
+
+.floating-chat-input:focus {
+  outline: none !important;
+  border-color: hsl(200 100% 45%) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.floating-chat-input:disabled {
+  background: hsl(210 40% 96.1%) !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+.floating-chat-send-btn {
+  all: initial;
+  display: flex !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, hsl(200 100% 45%), hsl(160 60% 50%)) !important;
+  border: none !important;
+  color: white !important;
+  cursor: pointer !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.floating-chat-send-btn svg {
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  fill: none !important;
+}
+
+.floating-chat-send-btn:hover:not(:disabled) {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.floating-chat-send-btn:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Animations */
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+  }
+  to {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0 !important;
+    transform: translateY(-20px) !important;
+  }
+  to {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+.floating-chat-container {
+  animation: slideInFromBottom 0.3s ease-out !important;
+}
+
+.floating-chat-top-left.floating-chat-container,
+.floating-chat-top-right.floating-chat-container {
+  animation: slideInFromTop 0.3s ease-out !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .floating-chat-container {
+    width: calc(100vw - 40px) !important;
+    height: calc(100vh - 40px) !important;
+    max-width: 380px !important;
+    max-height: 600px !important;
+  }
+}

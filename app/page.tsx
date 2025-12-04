@@ -6,6 +6,7 @@ import AIProviders from "@/components/AIProviders";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
+import FloatingChat from "@/components/demo/FloatingChat";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <AIProviders />
       <CTA />
       <Footer />
+      <FloatingChat />
     </main>
   );
 }
