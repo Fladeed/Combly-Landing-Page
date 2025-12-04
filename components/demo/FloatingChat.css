@@ -27,6 +27,9 @@
   padding: 0 !important;
   box-sizing: border-box !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  pointer-events: auto !important;
 }
 
 .floating-chat-icon:hover {
@@ -120,6 +123,8 @@
   box-sizing: border-box !important;
   margin: 0 !important;
   padding: 0 !important;
+  bottom: 90px !important;
+  right: 24px !important;
 }
 
 /* Header */

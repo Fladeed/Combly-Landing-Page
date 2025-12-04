@@ -1,0 +1,263 @@
+/* Workflow Canvas Styles */
+
+.workflow-canvas-container {
+  width: 100%;
+  height: 700px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .workflow-canvas-container {
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+}
+
+.workflow-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, hsl(200 100% 45%), hsl(160 60% 50%));
+  color: white;
+}
+
+.workflow-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.workflow-info p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.95;
+}
+
+.workflow-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.workflow-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  backdrop-filter: blur(10px);
+}
+
+.workflow-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.workflow-btn.executing {
+  background: rgba(239, 68, 68, 0.3);
+  border-color: rgba(239, 68, 68, 0.5);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+}
+
+.workflow-canvas {
+  flex: 1;
+  position: relative;
+}
+
+/* Custom Node Styles */
+.workflow-node {
+  min-width: 180px;
+  padding: 12px;
+  background: white;
+  border: 2px solid hsl(var(--medical-blue));
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.dark .workflow-node {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.workflow-node:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.workflow-node.executing {
+  border-color: hsl(var(--medical-green));
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+  animation: node-pulse 1.5s infinite;
+}
+
+.workflow-node.success {
+  border-color: hsl(var(--medical-green));
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, white 100%);
+}
+
+.dark .workflow-node.success {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, hsl(var(--background)) 100%);
+}
+
+@keyframes node-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.node-icon {
+  font-size: 1.25rem;
+}
+
+.node-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+}
+
+.node-content {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.node-description {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.node-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: hsl(var(--medical-blue) / 0.1);
+  color: hsl(var(--medical-blue));
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.node-pulse {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  background: hsl(var(--medical-green));
+  border-radius: 50%;
+  animation: pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+/* Node type specific colors */
+.input-node {
+  border-color: hsl(160 60% 50%);
+}
+
+.input-node .node-title {
+  color: hsl(160 60% 40%);
+}
+
+.process-node {
+  border-color: hsl(200 100% 45%);
+}
+
+.process-node .node-title {
+  color: hsl(200 100% 35%);
+}
+
+.output-node {
+  border-color: hsl(280 60% 55%);
+}
+
+.output-node .node-title {
+  color: hsl(280 60% 45%);
+}
+
+/* React Flow overrides */
+.react-flow__attribution {
+  opacity: 0.3;
+}
+
+.react-flow__controls {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: white;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.dark .react-flow__controls-button {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.react-flow__controls-button:hover {
+  background: hsl(var(--accent));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .workflow-canvas-container {
+    height: 500px;
+  }
+
+  .workflow-toolbar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .workflow-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .workflow-btn span {
+    display: none;
+  }
+}

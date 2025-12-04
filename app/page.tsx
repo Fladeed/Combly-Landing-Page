@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
+import WorkflowPreview from "@/components/WorkflowPreview";
 import UseCases from "@/components/UseCases";
 import AIProviders from "@/components/AIProviders";
 import CTA from "@/components/CTA";
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Features />
       <HowItWorks />
+      <WorkflowPreview />
       <UseCases />
       <AIProviders />
       <CTA />

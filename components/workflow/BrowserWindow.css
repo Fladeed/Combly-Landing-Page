@@ -1,0 +1,255 @@
+/* Browser Window Styles */
+
+.browser-window {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid hsl(var(--border));
+}
+
+.dark .browser-window {
+  background: hsl(var(--card));
+  border-color: hsl(var(--border));
+}
+
+/* Browser Chrome */
+.browser-chrome {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+  background: #f5f5f7;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 12px;
+}
+
+.dark .browser-chrome {
+  background: hsl(var(--muted));
+  border-bottom-color: hsl(var(--border));
+}
+
+.browser-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.browser-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.browser-dot.red {
+  background: #ff5f56;
+}
+
+.browser-dot.yellow {
+  background: #ffbd2e;
+}
+
+.browser-dot.green {
+  background: #27c93f;
+}
+
+.browser-dot:hover {
+  filter: brightness(1.1);
+  transform: scale(1.1);
+}
+
+.browser-tabs {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.browser-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.browser-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 6px 6px 0 0;
+  font-size: 0.8125rem;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 0;
+  max-width: 200px;
+}
+
+.dark .browser-tab {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.browser-tab:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.dark .browser-tab:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.browser-tab.active {
+  background: white;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dark .browser-tab.active {
+  background: hsl(var(--card));
+}
+
+.tab-icon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  color: hsl(var(--muted-foreground));
+}
+
+.tab-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.tab-close {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.tab-close:hover {
+  opacity: 1;
+}
+
+.browser-window-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.window-control {
+  width: 14px;
+  height: 14px;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.window-control:hover {
+  color: hsl(var(--foreground));
+}
+
+/* Address Bar */
+.browser-addressbar {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 16px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dark .browser-addressbar {
+  background: hsl(var(--card));
+  border-bottom-color: hsl(var(--border));
+}
+
+.address-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 32px;
+  padding: 0 12px;
+  background: #f5f5f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.dark .address-input {
+  background: hsl(var(--muted));
+  border-color: hsl(var(--border));
+}
+
+.address-input:hover {
+  border-color: hsl(var(--medical-blue) / 0.3);
+}
+
+.lock-icon {
+  flex-shrink: 0;
+  color: hsl(var(--medical-green));
+}
+
+.address-url {
+  flex: 1;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Browser Content */
+.browser-content {
+  background: white;
+  min-height: 400px;
+}
+
+.dark .browser-content {
+  background: hsl(var(--background));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .browser-chrome {
+    height: 36px;
+    padding: 0 8px;
+  }
+
+  .browser-controls {
+    gap: 6px;
+  }
+
+  .browser-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .browser-tab {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .browser-window-controls {
+    display: none;
+  }
+
+  .browser-addressbar {
+    height: 40px;
+    padding: 0 12px;
+  }
+
+  .address-input {
+    height: 28px;
+    padding: 0 10px;
+  }
+
+  .address-url {
+    font-size: 0.8125rem;
+  }
+}
