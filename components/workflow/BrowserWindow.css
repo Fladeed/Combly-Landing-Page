@@ -6,12 +6,12 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border: 1px solid hsl(var(--border));
+  border: 1px solid rgb(229, 231, 235);
 }
 
 .dark .browser-window {
-  background: hsl(var(--card));
-  border-color: hsl(var(--border));
+  background: rgb(31, 41, 55); /* gray-800 */
+  border-color: rgb(55, 65, 81); /* gray-700 */
 }
 
 /* Browser Chrome */
@@ -26,8 +26,8 @@
 }
 
 .dark .browser-chrome {
-  background: hsl(var(--muted));
-  border-bottom-color: hsl(var(--border));
+  background: rgb(55, 65, 81); /* gray-700 */
+  border-bottom-color: rgb(75, 85, 99); /* gray-600 */
 }
 
 .browser-controls {
@@ -80,7 +80,7 @@
   background: rgba(0, 0, 0, 0.05);
   border-radius: 6px 6px 0 0;
   font-size: 0.8125rem;
-  color: hsl(var(--foreground));
+  color: rgb(17, 24, 39); /* gray-900 */
   cursor: pointer;
   transition: all 0.2s;
   min-width: 0;
@@ -89,6 +89,7 @@
 
 .dark .browser-tab {
   background: rgba(255, 255, 255, 0.05);
+  color: rgb(229, 231, 235); /* gray-200 */
 }
 
 .browser-tab:hover {
@@ -105,14 +106,18 @@
 }
 
 .dark .browser-tab.active {
-  background: hsl(var(--card));
+  background: rgb(31, 41, 55); /* gray-800 */
 }
 
 .tab-icon {
   flex-shrink: 0;
   width: 14px;
   height: 14px;
-  color: hsl(var(--muted-foreground));
+  color: rgb(107, 114, 128); /* gray-500 */
+}
+
+.dark .tab-icon {
+  color: rgb(156, 163, 175); /* gray-400 */
 }
 
 .tab-title {
@@ -121,6 +126,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+.dark .tab-title {
+  color: hsl(var(--foreground) / 0.9);
 }
 
 .tab-close {
@@ -144,13 +154,21 @@
 .window-control {
   width: 14px;
   height: 14px;
-  color: hsl(var(--muted-foreground));
+  color: rgb(107, 114, 128); /* gray-500 */
   cursor: pointer;
   transition: color 0.2s;
 }
 
 .window-control:hover {
-  color: hsl(var(--foreground));
+  color: rgb(17, 24, 39); /* gray-900 */
+}
+
+.dark .window-control {
+  color: rgb(156, 163, 175); /* gray-400 */
+}
+
+.dark .window-control:hover {
+  color: rgb(229, 231, 235); /* gray-200 */
 }
 
 /* Address Bar */
@@ -164,8 +182,8 @@
 }
 
 .dark .browser-addressbar {
-  background: hsl(var(--card));
-  border-bottom-color: hsl(var(--border));
+  background: rgb(31, 41, 55); /* gray-800 */
+  border-bottom-color: rgb(55, 65, 81); /* gray-700 */
 }
 
 .address-input {
@@ -182,8 +200,8 @@
 }
 
 .dark .address-input {
-  background: hsl(var(--muted));
-  border-color: hsl(var(--border));
+  background: rgb(55, 65, 81); /* gray-700 */
+  border-color: rgb(75, 85, 99); /* gray-600 */
 }
 
 .address-input:hover {
@@ -204,14 +222,18 @@
   text-overflow: ellipsis;
 }
 
+.dark .address-url {
+  color: hsl(var(--foreground) / 0.8);
+}
+
 /* Browser Content */
 .browser-content {
   background: white;
-  min-height: 400px;
+  min-height: 300px;
 }
 
 .dark .browser-content {
-  background: hsl(var(--background));
+  background: rgb(31, 41, 55); /* gray-800 */
 }
 
 /* Responsive */

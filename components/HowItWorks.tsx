@@ -66,7 +66,7 @@ export default function HowItWorks() {
                 </p>
               </div>
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-medical"></div>
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-medical opacity-30 dark:opacity-50"></div>
               )}
             </div>
           ))}
